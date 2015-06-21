@@ -21,6 +21,7 @@ import static org.lwjgl.opengl.GL11.glTexParameteri;
 import static org.lwjgl.opengl.GL11.glTranslatef;
 import static org.lwjgl.opengl.GL11.glVertex2f;
 
+import org.jackgames.GameClass;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
@@ -35,7 +36,7 @@ public class Screen {
 	public static int scrollSpeed =2;
 	
 	public static void startDisplay(){
-		Display.setTitle("SurvivalJosh");
+		Display.setTitle(GameClass.GAMENAME + " " + GameClass.VERSION);
 	try {
 		Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
 		Display.create();
@@ -45,7 +46,7 @@ public class Screen {
 	}
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(0, WIDTH/SCALE, HEIGHT/SCALE, 0, 1, -1);
+	glOrtho(0, WIDTH, HEIGHT, 0, 1, -1);
 	glMatrixMode(GL_MODELVIEW);
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_BLEND);
@@ -86,7 +87,7 @@ public class Screen {
 		glEnd();
 	//	glScaled(2,  4 , 2);
 		glLoadIdentity();
-		glTranslatef(-Screen.scrollx, -Screen.scrolly, 0);
+		glTranslatef(0,0, 0);
 	
 	
 		

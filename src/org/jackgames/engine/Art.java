@@ -9,10 +9,10 @@ import org.newdawn.slick.util.ResourceLoader;
 
 public class Art {
 
-	public static final Texture baseTile = loadTexture("res/baseTile.png", "PNG");
+	//public static final Texture baseTile = loadTexture("res/baseTile.png", "PNG");
 	public static final Texture apple = loadTexture("res/entities/apple.png", "PNG");
 	
-	public static final Texture mainMenue = loadTexture("res/ui/mainMenue.png", "PNG");
+	//public static final Texture mainMenue = loadTexture("res/ui/mainMenue.png", "PNG");
 
 
 public static Texture loadTexture(String path, String fileType){
