@@ -22,8 +22,8 @@ public abstract class GUI {
 	public boolean isButtonPressed(Button b){
 		float mouseY = Screen.HEIGHT-Mouse.getY()-1;
 		float mouseX = Mouse.getX();
-		System.out.println("MouseX " + mouseX + " MouseY " + mouseY);
-		System.out.println("Button1 " +b.getPosx() + "," + b.getPosy() + "   Button2 " + (b.getPosx()+b.getWidth()) + "," + (b.getPosy() + b.getHeight()));
+		//System.out.println("MouseX " + mouseX + " MouseY " + mouseY);
+	//	System.out.println("Button1 " +b.getPosx() + "," + b.getPosy() + "   Button2 " + (b.getPosx()+b.getWidth()) + "," + (b.getPosy() + b.getHeight()));
 		
 		if(mouseX > b.getPosx() && mouseX < b.getPosx() + b.getWidth() &&
 				mouseY > b.getPosy() && mouseY < b.getPosy() + b.getHeight() ){

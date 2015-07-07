@@ -5,12 +5,6 @@ public abstract class Entity {
 	protected float posX, posY;
 	protected float width, height;
 	
-	public Entity(){
-		posX = 0;
-		posY = 0;
-		width = 32;
-		height = 32;
-	}
 	
 	public Entity(float x, float y){
 		posX = x;

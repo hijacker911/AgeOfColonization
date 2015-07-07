@@ -17,7 +17,16 @@ public class MainMenu extends GUI{
 	protected void buttonPressed(Button b) {
 		if(b.getName()==START){
 			System.out.println("---START---");
+		}if(b.getName()==OPTIONS){
+			System.out.println("---Options---");
+		}if(b.getName()==EXIT){
+			System.out.println("---Exit---");
 		}
+	}
+	
+	public void render(){
+		super.render();
+		Screen.DrawQuadTexture(70, 70, 32, 32, Art.mainMenue);
 	}
 	
 }

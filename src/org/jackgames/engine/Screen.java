@@ -22,9 +22,11 @@ import static org.lwjgl.opengl.GL11.glTranslatef;
 import static org.lwjgl.opengl.GL11.glVertex2f;
 
 import org.jackgames.GameClass;
+import org.jackgames.level.Hexagon;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
+import org.lwjgl.opengl.GL11;
 import org.newdawn.slick.opengl.Texture;
 
 public class Screen {
@@ -41,7 +43,7 @@ public class Screen {
 		Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
 		Display.create();
 	} catch (LWJGLException e) {
-		// TODO Auto-generated catch block
+		// 
 		e.printStackTrace();
 	}
 	glMatrixMode(GL_PROJECTION);
@@ -74,7 +76,7 @@ public class Screen {
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 		tex.bind();
 		glTranslatef(x, y, 0);
-		
+	
 		glBegin(GL_QUADS);
 		glTexCoord2f(0, 0);
 		glVertex2f(0, 0);
@@ -93,8 +95,64 @@ public class Screen {
 		
 	}
 	
+	public static void drawHexagon(float posx, float posy, Texture tex){
+		
+	        float angle = 0.0f; // angle(in radians) for each vertex
+	        float x, y;
+	        tex.bind();
+	        glTranslatef(posx-Hexagon.H_LENGHT/2, posy-Hexagon.V_LENGHT/2, 0);
+	        glBegin(GL11.GL_TRIANGLE_FAN);
+	        
+	        
+	        
+	        GL11.glTexCoord2f(1/2.0f, 1/2.0f);
+            GL11.glVertex2f(0, 0);
+            
+            GL11.glTexCoord2f(2/2.0f, 2/2.0f);
+            GL11.glVertex2f(Hexagon.LENGHT, 0);
+            
+            GL11.glTexCoord2f(3/2.0f, 3/2.0f);
+            GL11.glVertex2f(Hexagon.LENGHT+Hexagon.HEIGHT, Hexagon.RADIUS);
+            
+            GL11.glTexCoord2f(4/2.0f, 4/2.0f);
+            GL11.glVertex2f(Hexagon.LENGHT, Hexagon.RADIUS*2);
+            
+            GL11.glTexCoord2f(5/2.0f, 5/2.0f);
+            GL11.glVertex2f(0, Hexagon.RADIUS*2);
+            
+            GL11.glTexCoord2f(6/2.0f, 6/2.0f);
+            GL11.glVertex2f(-Hexagon.HEIGHT, Hexagon.RADIUS);
+          
+           
+	        
+	        /*   
+	            GL11.glTexCoord3f(0.5f, 0.5f, 0.0f);
+	            GL11.glVertex3f(0.0f, 0.0f, 0.0f);
+	 
+	            // divide the circle up into 6 sections(starting from top right)
+	            for (int numVertices = 0; numVertices < 6; numVertices++){
+	                x = (float)Math.cos(angle);
+	                y = (float)Math.sin(angle);
+	                angle += 2.0f*(float)Math.PI/6.0f;
+	 
+	                // map the hexagon coordinates to image coordinates(0...1)
+	                GL11.glTexCoord3f((x+1)/2.0f, (y+1)/2.0f, 0.0f);
+	                GL11.glVertex3f(Hexagon.RADIUS*x, Hexagon.RADIUS*y, 0.0f);
+	            }
+	            // last vertex closes the fan (defined explicitely for best precision)
+	            GL11.glTexCoord3f(1.0f, 0.5f, 0.0f);
+	            GL11.glVertex3f(Hexagon.RADIUS, 0.0f, 0.0f);
+	         */   
+	        GL11.glEnd();
+	    	glLoadIdentity();
+	        glTranslatef(0, 0, 0);
+	    }
+		
+	}
 	
 	
 	
-}
+	
+	
+
 
