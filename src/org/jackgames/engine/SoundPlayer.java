@@ -19,6 +19,8 @@ import org.lwjgl.util.WaveData;
 
 public class SoundPlayer {
 	
+	//TODO Aufräumen
+	
 	/** Buffers hold sound data. */
 	  static IntBuffer buffer = BufferUtils.createIntBuffer(1);
 	 

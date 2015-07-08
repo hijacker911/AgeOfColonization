@@ -39,7 +39,7 @@ public class Item extends Entity implements IStoreable{
 	public static class ItemType{
 		
 		
-		public static final ItemType stone = new ItemType("Stone", "Mainly needed for building", 32, 32, Art.stone, 1);
+		//public static final ItemType stone = new ItemType("Stone", "Mainly needed for building", 32, 32, Art.items.getSprite(0), 1);
 		
 		private String name, desc;
 		private int width, height, id;

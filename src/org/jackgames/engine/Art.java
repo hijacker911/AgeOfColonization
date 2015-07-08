@@ -15,8 +15,8 @@ public class Art {
 	public static final Texture mainMenue = loadTexture("res/ui/mainMenue.png", "PNG");
 	public static final Texture testTile = loadTexture("res/tiles/test.png", "PNG");
 	public static final Texture testTile2 = loadTexture("res/tiles/test2.png", "PNG");
-
-	public static final Texture stone = loadTexture("res/items/stone.png", "PNG");
+	public static final SpriteSheet items = new SpriteSheet("/items/items.png", 32);
+	//public static final Texture stone = loadTexture("res/items/stone.png", "PNG");
 
 
 	public static Texture loadTexture(String path, String fileType){
