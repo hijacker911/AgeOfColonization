@@ -1,5 +1,7 @@
 package org.jackgames.entity.item;
 
+import java.util.ArrayList;
+
 import org.jackgames.engine.Art;
 import org.jackgames.engine.Screen;
 import org.jackgames.entity.Entity;
@@ -38,7 +40,7 @@ public class Item extends Entity implements IStoreable{
 	
 	public static class ItemType{
 		
-	//TODO Sprites überprüfen
+		//TODO Sprites überprüfen
 		public static final ItemType stone = new ItemType("Stone", "Mainly needed for building", 32, 32, Art.items.getSprite(10));
 		public static final ItemType log = new ItemType("Log", "Needed to produce boards", 32, 32, Art.items.getSprite(8));
 		public static final ItemType boards = new ItemType("Boards", "Mainly needed for building", 32, 32, Art.items.getSprite(9));
@@ -51,7 +53,7 @@ public class Item extends Entity implements IStoreable{
 		public static final ItemType coal = new ItemType("Coal", "Needed for smelting and smithing", 32, 32, Art.items.getSprite(5));
 		public static final ItemType flodyllore = new ItemType("Flodyll Ore", "Magical Ore", 32, 32, Art.items.getSprite(7));
 		
-		
+		public static ArrayList<ItemType> items = new ArrayList<ItemType>();
 		
 		
 		private String name, desc;

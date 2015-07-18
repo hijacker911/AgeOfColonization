@@ -30,7 +30,7 @@ public class Hexagon {
 		if(uneven){
 			Screen.drawHexagon(posx, posy, Art.testTile2);
 		}else
-		Screen.drawHexagon(posx, posy, Art.testTile);
+			Screen.drawHexagon(posx, posy, Art.testTile);
 		
 	}
 	

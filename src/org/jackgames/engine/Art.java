@@ -18,6 +18,7 @@ public class Art {
 	public static final SpriteSheet items = new SpriteSheet("/items/items.png", 32);
 	//public static final Texture stone = loadTexture("res/items/stone.png", "PNG");
 
+	public static final Texture startbutton = loadTexture("res/ui/buttonStart.png", "PNG");
 
 	public static Texture loadTexture(String path, String fileType){
 	
