@@ -31,8 +31,6 @@ public class SpriteSheet {
 
 	private void load() {
 		try {
-			System.out.println(path);
-			System.out.println(GameClass.class.getResource(path));
 			image = ImageIO.read(GameClass.class.getResource(path));
 			pixelWidth = image.getWidth();
 			pixelHeight = image.getHeight();
