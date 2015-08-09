@@ -16,8 +16,10 @@ public abstract class GUI {
 	public void render(){
 		for(Button b: buttons){
 			Screen.DrawQuadTexture(b.getPosx(), b.getPosy(), b.getWidth(), b.getHeight(), b.getTexture());
-		}
 	}
+		}
+		
+		
 	
 	public boolean isButtonPressed(Button b){
 		float mouseY = Screen.HEIGHT-Mouse.getY()-1;

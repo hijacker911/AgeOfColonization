@@ -10,16 +10,16 @@ import org.newdawn.slick.util.ResourceLoader;
 public class Art {
 
 	//public static final Texture baseTile = loadTexture("res/baseTile.png", "PNG");
-	public static final Texture apple = loadTexture("res/entities/apple.png", "PNG");
+	public static final Texture apple = loadTexture("entities/apple.png", "PNG");
 	
-	public static final Texture mainMenue = loadTexture("res/ui/mainMenue.png", "PNG");
-	public static final Texture testTile = loadTexture("res/tiles/test.png", "PNG");
-	public static final Texture testTile2 = loadTexture("res/tiles/test2.png", "PNG");
+	public static final Texture mainMenue = loadTexture("ui/mainMenue.png", "PNG");
+	public static final Texture testTile = loadTexture("tiles/test.png", "PNG");
+	public static final Texture testTile2 = loadTexture("tiles/test2.png", "PNG");
 	public static final SpriteSheet items = new SpriteSheet("/items/items.png", 32);
 	//public static final Texture stone = loadTexture("res/items/stone.png", "PNG");
 
-	public static final Texture startButton = loadTexture("res/ui/buttonStart.png", "PNG");
-	public static final Texture exitButton = loadTexture("res/ui/buttonExit.png", "PNG");
+	public static final Texture startButton = loadTexture("ui/buttonStart.png", "PNG");
+	public static final Texture exitButton = loadTexture("ui/buttonExit.png", "PNG");
 
 	public static Texture loadTexture(String path, String fileType){
 	

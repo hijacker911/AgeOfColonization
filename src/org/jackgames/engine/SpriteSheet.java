@@ -1,7 +1,6 @@
 package org.jackgames.engine;
 
 import java.awt.image.BufferedImage;
-import java.awt.image.IndexColorModel;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

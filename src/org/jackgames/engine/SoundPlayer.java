@@ -1,15 +1,8 @@
 package org.jackgames.engine;
 
 import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
- 
-
-
-import java.util.Scanner;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;

@@ -1,5 +1,8 @@
 package org.jackgames;
 
+import java.io.File;
+import java.util.StringTokenizer;
+
 import org.jackgames.GUI.MainMenu;
 import org.jackgames.engine.Screen;
 import org.jackgames.level.Hexagon;
@@ -19,6 +22,11 @@ public class GameClass {
 	
 	public GameClass(){
 		Hexagon.init();
+		String property = System.getProperty("java.library.path");
+		StringTokenizer parser = new StringTokenizer(property, ";");
+		while (parser.hasMoreTokens()) {
+		    System.err.println(parser.nextToken());
+		    }
 		Screen.startDisplay();
 		MainMenu menu = new MainMenu();
 		
